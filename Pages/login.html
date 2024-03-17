@@ -1,0 +1,145 @@
+<html>
+<head>
+<link rel="stylesheet" href="mainstyle.css">
+<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+
+<script src="./login.js" defer></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  
+</head>
+
+
+<body>
+  <div id="navbar">
+    <ul>
+      <li id = 'homepage-link'><a href="homepage.html">Home</a></li>
+      <li id="shop-link"><a href="shop.html">Shop</a></li>
+      <li id="cart-link" class="hidden-content"><a href="cart.html">My Cart</a></li>
+      <li id="shop-link"><a href="login.html">Account</a></li>
+      <li><a id="login-status">Guest</a></li>
+      <li class="hidden-content" id="logout-link" style="cursor: pointer;"><a onclick="logout()">Logout</a></li>
+    </ul>
+  </div>
+
+<!-- Your login form (replace this with your actual login implementation) -->
+<div id="user-form" class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Login or Register
+        </div>
+        <div class="card-body">
+          <!-- Login Form -->
+          <form id="login-form">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter your password">
+            </div>
+            <button type="button" class="btn btn-primary btn-block" onclick="login()">Login</button>
+            <div class="card-footer text-center">
+              <p>Don't have an account? <a href="javascript:void(0)" onclick="toggleForms()"><br>Register here</a>.</p>
+            </div>
+          </form>
+
+          <!-- Registration Form -->
+          <form id="register-form" style="display: none;">
+            <div class="form-group">
+              <label for="new-username">New Username</label>
+              <input type="text" class="form-control" id="new-username" placeholder="Enter a new username">
+            </div>
+            <div class="form-group">
+              <label for="new-password">New Password</label>
+              <input type="password" class="form-control" id="new-password" placeholder="Enter a new password">
+            </div>
+            <button type="button" class="btn btn-success btn-block" onclick="register()">Register</button>
+            <div class="card-footer text-center">
+              <p>Have an account? <a href="javascript:void(0)" onclick="toggleForms()"><br>Login here</a>.</p>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+  // Initialize validation for login form
+  $("#login-form").validate({
+    rules: {
+      username: {
+        required: true,
+        minlength: 5,
+      },
+      password: {
+        required: true,
+        minlength: 5,
+      },
+    },
+    messages: {
+      username: {
+        required: "Please enter your username",
+      },
+      password: {
+        required: "Please enter your password",
+      },
+    },
+  });
+  console.log($("#login-form").valid());
+
+  // Initialize validation for register form
+  $("#register-form").validate({
+    rules: {
+      newUsername: {
+        required: true,
+      },
+      newPassword: {
+        required: true,
+      },
+    },
+    messages: {
+      newUsername: {
+        required: "Please enter a new username",
+      },
+      newPassword: {
+        required: "Please enter a new password",
+      },
+    },
+  });
+});
+console.log($("#register-form").valid());
+</script>
+
+<div id="profile-form" class="container mt-5">
+  <div class="row">
+    <div style="margin-top: 50px;" class="col-md-6 offset-md-3">
+      <div class="card text-center">
+        <!-- Center the icon vertically and horizontally -->
+        <div class="d-flex align-items-center justify-content-center mt-3">
+          <i class="fas fa-user-circle fa-5x"></i>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">John Doe</h5>
+          <p class="card-text">john.doe@example.com</p>
+          <a href="#" class="btn btn-primary">Edit Profile</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </body>
+
+</html>

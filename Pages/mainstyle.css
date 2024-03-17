@@ -1,0 +1,52 @@
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set a basic font */
+    margin:0;
+  }
+
+#navbar{
+  z-index: 1000; /* Set a higher z-index value to bring the navbar to the front */
+  position: fixed;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set a basic font */
+}
+
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  #navbar li {
+    float: left;
+  }
+  
+  #navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  #navbar li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  #navbar .active {
+    background-color: #04AA6D;
+  }
+
+  .hidden-content {
+    display: none;
+  }
+
+  #login-form{
+    margin-top: 50px;
+  }
+

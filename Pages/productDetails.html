@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="description" content="A online E-commerce sneakers shop made by dmaotech">
+  <meta name="keywords" content="sneakers, shoes, E-commerce, online, shop, style, product">
+  
+  <script src="./productDetails.js"></script>
+  <script src="./shop.js"></script>
+  <script src="./login.js" defer></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./productDetails.css">
+  <link rel="stylesheet" href="./mainstyle.css">
+
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+          <li id = 'homepage-link'><a href="homepage.html">Home</a></li>
+          <li id="shop-link"><a href="shop.html">Shop</a></li>
+          <li id="cart-link" class="hidden-content"><a href="cart.html">My Cart</a></li>
+          <li id="shop-link"><a href="login.html">Account</a></li>
+          <li><a id="login-status">Guest</a></li>
+        </ul>
+      </div>
+
+  <main class="main__container">
+    <div class="cart">
+      <header class="cart-header">
+        <p class="cart-header--title">Cart</p>
+      </header>
+
+      <section class="cart-content empty">
+        <div class="cart__btn--container">
+          <a href="#" class="cart__btn" type="button" aria-label="proceed to checkout section">Checkout</a>
+        </div>
+        <p class="cart__empty--text">Your cart is empty.</p>
+      </section>
+    </div>
+
+    <section class="slider">
+
+      <div class="slider__img--container">
+        <img class="slider__img" src="../Images/abstract_paint.jpg" alt="">
+      </div>
+
+    </section>
+
+    <section class="product-content">
+      <article class="product-content--info">
+        <div class="product__info--text">
+          <p class="product__info--brand">Art Store</p>
+          <h2 class="product__info--title">Fall Limited Edition Sneakers</h2>
+          <p class="product__info--description">
+            npsbnpbnpsbnpsb
+          </p>
+        </div>
+
+        <div class="info__pricing">
+          <span class="info__pricing--price">$125.00</span>
+        </div>
+      </article>
+
+      <div class="product-content__order">
+        <div class="order__quantity">
+          <input class="order__quantity--input" type="number" value="0" name="quantity">
+          <button class="order__quantity--btn minus" type="button" aria-label="button for remove quantity product"><img src="../Images/icon-minus.svg" alt=""></button>
+          <button class="order__quantity--btn plus" type="button" aria-label="button for add quantity product"><img src="../Images/icon-plus.svg" alt=""></button>
+        </div>
+
+        <button class="order__cart" type="button"><img class="order__cart--icon" src="../Images/icon-cart-white.svg" alt=""> Add to cart</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

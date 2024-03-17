@@ -1,0 +1,18 @@
+/* Style for hidden content */
+.hidden-content {
+    display: none;
+  }
+body{
+  /* Set the background image */
+  background-image: url('../Images/abstract_paint.jpg');
+  /* Set the background size to cover the entire viewport */
+  background-size: cover;
+  /* Center the background image horizontally and vertically */
+  background-position: center;
+  /* Fix the background image so it doesn't scroll with the page */
+  background-attachment: fixed;
+}
+
+#login-form{
+  margin-top: 50px;
+}
