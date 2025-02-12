@@ -1,4 +1,4 @@
-# Art E-Commerce Website
+# Basic Art E-Commerce Website
 
 ## Description
 
